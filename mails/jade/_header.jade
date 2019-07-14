@@ -1,0 +1,29 @@
+doctype transitional
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    title ##APPNAME## - ##APPSUBJECT##
+    style(type='text/css').
+      /* Client-specific Styles */
+      #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" button. */
+      .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+  body(leftmargin='0', marginwidth='0', topmargin='0', marginheight='0', offset='0', style='background-color:#FAFAFA; margin:0; padding:0; -webkit-text-size-adjust:none; width:100% !important;')
+    center
+      table#backgroundTable(border='0', cellpadding='0', cellspacing='0', height='100%', width='100%', style='background-color:#FAFAFA; height:100% !important; margin:0; padding:0; width:100% !important;')
+        tr
+          td(align='center', valign='top', style='padding-top:20px;')
+            table#templateContainer(border='0', cellpadding='0', cellspacing='0', width='600', style='background-color:#FFFFFF; border: 1px solid #DDDDDD;')
+              // Datos de contacto
+              tr
+                td(align='center', valign='middle', style='padding: 10px 0; color: white; font-family:Arial; font-size: 14px; background-color: ##APPCOLOR##') ##APPNAME##
+              // Logo
+              tr
+                td(align='center', valign='top')
+                  // // Begin Template Header \\
+                  table#templateHeader(border='0', cellpadding='0', cellspacing='0', width='600')
+                    tr
+                      td.headerContent(style='background: white; color:#202020; font-family:Arial; font-size:34px; font-weight:bold; line-height:100%; padding:0; text-align:center; vertical-align:middle;border-bottom: 2px solid lightgray;')
+                        // // Begin Module: Standard Header Image \\
+                        img(src='##APPLOGO##', style='max-width:100px;margin:30px auto; border:0; height:auto; line-height:100%; outline:none; text-decoration:none;', id='headerImage campaign-icon', alt='##APPNAME##')
+                        // // End Module: Standard Header Image \\
+                  // // End Template Header \\

@@ -1,0 +1,62 @@
+// HEADER
+#nav {
+    background: none;
+    z-index: 5;
+    border: 0;
+    @include border-radius(0px);
+    transition: 0.3s;
+    margin: 0;
+}
+
+.navbar-toggle {
+    @include border-radius(0);
+    border: 1px solid $black !important;
+    margin: 15px 20px 15px 0;
+    transition: 0.3s;
+    padding: 10px;
+    
+    .icon-bar {
+        position: relative;
+        transition: 0.3s;
+        background-color: $black !important;
+        
+        &:nth-child(2) {
+            transform: rotate(-45deg);
+            top: 7px;
+        }
+        
+        &:nth-child(3) {
+            visibility: hidden;
+            opacity: 0;
+        }
+        
+        &:nth-child(4) {
+            transform: rotate(45deg);
+            top: -5px;
+        }
+        
+    }
+    
+    &.collapsed {
+        .icon-bar {
+            transform: rotate(0deg);
+            top: 0;
+            
+            &:nth-child(3) {
+                visibility: visible;
+                opacity: 1;
+            }
+            
+        }
+    }
+    
+    &:hover, &:focus {
+        background-color: lighten($black, 10) !important;
+        
+        .icon-bar {
+            background-color: $white !important;
+        }
+        
+    }
+    
+}

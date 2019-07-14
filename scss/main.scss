@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* Developer: Juan Ignacio Cieri */
+/* Developer URI: http://juancieri.com */
+
+@import 'bootstrap.min.css';
+@import 'animate.min.css';
+@import 'owl.carousel.min.css';
+
+@import 'helpers/_variables';
+@import 'helpers/_mixins';
+@import 'components/_fonts';
+@import 'layout/_grid';
+
+// COMMON
+body, html {
+    font-family: $primary-font;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'components/_carousel';
+@import 'components/_buttons';
+@import 'components/_forms';
+@import 'components/_modals';
+@import 'components/_titles';
+
+// PAGES
+@import 'pages/_home';
+
+// CUSTOM SCROLLBAR
+@include scrollbars(.5em, $primary-color);
+
+// BACK TO TOP
+#toTop {
+    position: fixed;
+    bottom: 35px;
+    left: 35px;
+    background: $white;
+    @include border-radius(5px);
+    font-size: 20px;
+    border: 1px solid $black;
+    padding: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    i {
+        line-height: 0;
+        position: relative;
+        top: -2px;
+    }
+    
+    &:hover {
+        background: $primary-color;
+        color: $white;
+    }
+}
